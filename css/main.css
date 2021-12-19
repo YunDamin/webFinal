@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
+
+@media screen and (max-width: 768px) {
+    *{
+        background: white;
+    }
+    .center{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #topdiv{ top: 10vh;}
+    #set{
+        position: absolute;
+        opacity: 1;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 40vh;
+        text-align: center;
+        display:flex;
+        flex-direction : column;
+    }
+    .set2{
+        position: absolute;
+        opacity: 1;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 30vh;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 2.5vh;
+        animation: langsetCome 1.2s;
+        text-align: center;
+        display: none;
+    }
+    .langset{
+        animation: langsetCome 1.2s;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .lang{
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 2.5vh;
+        width: 20vh;
+        height: 20vh;
+        background-color: rgba(0, 0, 0, 0);
+        margin: 0 auto 0 auto;
+        border: 0;
+        outline: 0;
+        transition-duration: 1.2s;
+        
+        text-align: center;
+        display:table-cell;
+        vertical-align:middle;
+    }
+    .lang p{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .lang:hover{
+        animation: lang 0.8s infinite both;
+        color:brown;
+    }
+    #title{
+        animation: title 0.7s both;
+        text-align: center;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 4vh  ;
+    }
+}
+
+@media screen and (min-width: 769px){
+    *{
+        background: white;
+    }
+    .center{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #topdiv{ top: 10vh; width: 90vh;}
+    #set{
+        position: absolute;
+        width: 140vh;
+        opacity: 1;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 40vh;
+        text-align: center;
+    }
+    .set2{
+        position: absolute;
+        opacity: 1;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 30vh;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 2.5vh;
+        animation: langsetCome 1.2s;
+        text-align: center;
+        display: none;
+    }
+    .langset{
+        animation: langsetCome 1.2s;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .lang{
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 2.5vh;
+        width: 20vh;
+        height: 20vh;
+        background-color: rgba(0, 0, 0, 0);
+        margin: 0 auto 0 auto;
+        border: 0;
+        outline: 0;
+        transition-duration: 1.2s;
+    
+        text-align: center;
+        display:table-cell;
+        vertical-align:middle;
+    }
+    .lang p{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .lang:hover{
+        animation: lang 0.8s infinite both;
+        color:brown;
+    }
+    #title{
+        animation: title 0.7s both;
+        text-align: center;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 7vh  ;
+    }
+}
+
+
+@keyframes slide {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+@keyframes lang {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    } 
+}
+@keyframes langsetCome{
+    0% {
+        filter: blur(2vh);
+        opacity: 0;
+    }
+    100% {
+        filter: blur(0vh);
+        opacity: 1;
+    }
+}
+@keyframes langsetGo{
+    0% {
+        filter: blur(0vh);
+        opacity: 1;
+    }
+    100% {
+        filter: blur(1vh);
+        opacity: 0;
+    }
+}
+@keyframes title {
+    0% {
+        letter-spacing: 5.5vh;
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
